@@ -1,0 +1,27 @@
+server:
+  port: 9090
+
+
+# BELOW IS THE CONFIGURATION FOR AUTHORIZING OUR API BY VALIDATING THE TOKEN
+spring:
+  cloud:
+    azure:
+      active-directory:
+        b2c:
+          app-id-uri: https://jobps.onmicrosoft.com/e2a38034-8023-4acd-9e4d-bb01dd5a960f
+          enabled: true
+          base-uri: https://jobps.b2clogin.com
+          credential:
+            client-id: e2a38034-8023-4acd-9e4d-bb01dd5a960f
+            client-secret: RA~8Q~2aiOSJoOR8_wT5XqONavpwcI4bYWepMcCw
+          profile:
+            tenant-id: fdf61b4c-cc60-45d3-8be6-b538921b5e48
+          user-flows:
+            sign-up-or-sign-in: B2C_1_SUSI
+
+
+
+
+
+
+
